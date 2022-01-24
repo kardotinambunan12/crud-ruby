@@ -1,31 +1,33 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h4 class="mt-4 display-4">Listing Posts</h4>
+    <h4 class="mt-4 display-4">Daftar Tabel</h4>
   </div>
-  <%= link_to 'Create Post', new_post_path %>
-  <% if @posts.present? %>
-    <div class="row justify-content-center">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col" colspan="3">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @posts.each do |post| %>
+  <button type="button" class = " btn btn-outline-primary"><%= link_to 'Create Post', new_post_path %></button>
+  <br><br/>
+    <% if @posts.present? %>
+      <div class="row justify-content-center">
+        <table class="table table-bordered">
+          <thead>
             <tr>
-              <td><%= post.title %></td>
-              <td><%= post.description %></td>
-              <td><%= link_to 'Show', post_path(post.id) %></td>
-              <td><%= link_to 'Edit', edit_post_path(post.id) %></td>   
-              <td><%= link_to 'Delete',
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col" colspan="3">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @posts.each do |post| %>
+              <tr>
+                <td><%= post.title %></td>
+                <td><%= post.description %></td>
+
+                <td><%= link_to 'Show', post_path(post.id) %></td>
+                <td><%= link_to 'Edit', edit_post_path(post.id) %></td>
+                <td><%= link_to 'Delete',
               post_path(post.id),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-        </td>
-        </td>        
+                </td>
+              </td>
             </tr>
           <% end %>
         </tbody>
