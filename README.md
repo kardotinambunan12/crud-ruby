@@ -24,5 +24,12 @@ Things you may want to cover:
 * ...
 
 cara menjalankan bisa melakukan 
+
+disini saya menggunakan ruby versi 
+ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-linux]
+Rails 7.0.1
+Bundler version 2.3.5
+
+
 # Rails server
 # dan yang paling penting di perhatikan adalan folder controller, model, post, dan routes
