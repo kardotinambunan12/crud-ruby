@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+cara menjalankan bisa melakukan 
+# Rails server
+# dan yang paling penting di perhatikan adalan folder controller, model, post, dan routes
